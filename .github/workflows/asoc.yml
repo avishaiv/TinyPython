@@ -44,7 +44,6 @@ jobs:
         env:
           ASOC_KEY: ${{ secrets.ASOC_API_KEY }}
           ASOC_SECRET: ${{ secrets.ASOC_API_SECRET }}
-          TestVar: abcd
           ASOC_SCAN_NAME: GitHub_Actions_scan1
           ASOC_APPID: ${{ secrets.ASOC_APP_ID }}
 
