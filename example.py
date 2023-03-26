@@ -14,7 +14,7 @@ def anotherFunction(userInput):
     command = 'cat "{userInput}"'.format(source=userInput)
     subprocess.call(command, shell=True)
 
-# comment 1g
+# comment 1
 #def thirdFunction(userInput):
 #    req = Request(userInput)
 #    resp = req.Response()
