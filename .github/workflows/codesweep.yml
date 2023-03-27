@@ -6,23 +6,20 @@
 #
 # https://github.com/marketplace/actions/hcl-appscan-codesweep
 
-name: HCL AppScan CodeSweep Github Action
-
-
+name: "HCL AppScan CodeSweep GitHub Actions"
 on:
     push:
         branches: [ master ]
-
 jobs:
-  scan:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Run AppScan CodeSweep
-        uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@v1
-        with:
-          asoc_key: ${{secrets.ASOC_KEY}}
-          asoc_secret: ${{secrets.ASOC_SECRET}}
+    scan:
+        runs-on: windows-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v1
+          - name: Run AppScan CodeSweep
+            uses: HCL-TECH-SOFTWARE/appscan-codesweep-action@v2
+            with:
+                asoc_key: ${{secrets.ASOC_KEY}}
+                asoc_secret: ${{secrets.ASOC_SECRET}}
     env: 
-      GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
