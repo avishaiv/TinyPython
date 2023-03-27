@@ -5,8 +5,8 @@ name: AppScan on Cloud SAST workflow
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ master ]
+  #push:
+  #  branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -44,7 +44,6 @@ jobs:
         env:
           ASOC_KEY: ${{ secrets.ASOC_API_KEY }}
           ASOC_SECRET: ${{ secrets.ASOC_API_SECRET }}
-          TestVar: abcd
           ASOC_SCAN_NAME: GitHub_Actions_scan1
           ASOC_APPID: ${{ secrets.ASOC_APP_ID }}
 
